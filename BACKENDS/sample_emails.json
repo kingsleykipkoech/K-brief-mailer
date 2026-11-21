@@ -1,0 +1,38 @@
+[
+  {
+    "message_id": "sample-001",
+    "sender": "Frontier Community",
+    "address": "no-reply@notification.circle.so",
+    "subject": "Youth Ecopreneur Programme 2026/27",
+    "received_at": "2026-10-21 12:14:22",
+    "time_label": "Oct 21",
+    "body": "Applications are open worldwide for the Youth Ecopreneur Programme 2026/27, with two tracks for young founders: Green Business and Land Restoration.\n\nWhat could you gain?\n- $10,000 prizes for Youth Ecopreneur Award winners\n- Land Restoration track: access to a $100,000 equity-free funding pool\n- Global Bootcamp and Accelerator\n- Mentorship, coaching, legal and IP support\n\nJoint initiative by the International Trade Centre (ITC) and the UNCCD-G20 Global Land Initiative.\n\nDeadline: 22 November 2026"
+  },
+  {
+    "message_id": "sample-002",
+    "sender": "Darlyze from Devpost",
+    "address": "darlyze@devpost.com",
+    "subject": "3 projects that got noticed this week. Here's what they built.",
+    "received_at": "2026-08-20 22:13:15",
+    "time_label": "Aug 20",
+    "body": "Hey Devposters,\n\nThis week we're spotlighting the winners from the Backblaze Generative Media Hackathon:\n\n1. FirstFrame (Grand Prize) — Streams AI-generated video scene by scene so reviewers get a verdict in seconds.\n2. Beavous (Second Place) — Turns one approved product photo into a full ecommerce campaign.\n3. Takegraph (Third Place) — Treats generative media like a software build, rebuilding only changed assets.\n\nTrending Hackathons:\n- All Things Agentic Hackathon: $180,000 in cash prizes (Deadline: Aug 31)\n- CALL-E: Your Code Is Calling: $10,000 in prizes (Deadline: Sept 14)\n- RevenueCat Shipaton 2026: $740,000+ in prizes (Deadline: Sept 30)"
+  },
+  {
+    "message_id": "sample-003",
+    "sender": "Grammarly",
+    "address": "hello@mail.grammarly.com",
+    "subject": "Start using Grammarly outside of your browser",
+    "received_at": "2026-10-21 18:44:09",
+    "time_label": "Oct 21",
+    "body": "Bring confident writing to your desktop.\n\n1. Download Grammarly for Windows and Mac (free).\n2. Start writing in Word, Slack, Outlook, and 500,000+ desktop apps.\n3. Click the Grammarly widget to get writing suggestions anywhere on your screen."
+  },
+  {
+    "message_id": "sample-004",
+    "sender": "Prime Video",
+    "address": "no-reply@primevideo.com",
+    "subject": "Your Prime Video subscription has ended",
+    "received_at": "2026-10-23 19:23:53",
+    "time_label": "Oct 23",
+    "body": "Hello,\n\nYour Prime Video membership has ended.\n\nIf you would like to join Prime Video again, please visit Your Account settings to start a paid membership.\n\nThank you,\nAmazon Prime Video"
+  }
+]
