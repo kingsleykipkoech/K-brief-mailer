@@ -6,31 +6,93 @@
 .layout {
   height: 100dvh;
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 340px 1fr;
 }
 
-.col,
-.main {
+.col, .main, .inbox-head, .mail-list, .mail-btn, .summary-list, .profile-card, .account-box {
   display: flex;
   flex-direction: column;
-  min-height: 0;
 }
 
-.main {
+.col, .main {
+  min-height: 0;
   min-width: 0;
 }
 
-.inbox-col {
-  background: rgba(22, 27, 34, 0.68);
-  border-right: 1px solid rgba(240, 246, 252, 0.14);
+.inbox-title-row, .mail-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
-.inbox-head {
-  padding: 24px 22px 18px;
-  border-bottom: 1px solid rgba(240, 246, 252, 0.12);
+.inbox-tools, .topbar {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings-btn, .profile-backdrop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button { cursor: pointer; }
+.filter-btn, .mail-btn, .settings-btn, .close-btn { background: transparent; }
+
+.inbox-col, .summary-col { border-right: 1px solid rgba(240, 246, 252, 0.14); }
+.inbox-head, .topbar, .pane-head { border-bottom: 1px solid rgba(240, 246, 252, 0.12); }
+.mail-search, .sort-select, .profile-card { border: 1px solid rgba(240, 246, 252, 0.16); }
+.mail-list, .pane-body { flex: 1; overflow-y: auto; }
+.mail-sender, .mail-subject { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mail-title, .mail-body { overflow-wrap: anywhere; }
+.pane-head h2, .summary-list, .mail-body { color: rgba(240, 246, 252, 0.88); }
+.inbox-head h1, .filter-btn, .close-btn { color: rgba(240, 246, 252, 0.65); }
+
+.inbox-col { background: rgba(22, 27, 34, 0.68); }
+
+.inbox-head {
+  padding: 18px 18px 14px;
+  gap: 10px;
+}
+
+.mail-search {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 7px;
+  background: rgba(13, 17, 23, 0.45);
+  color: #f0f6fc;
+  font-size: 0.85rem;
+}
+
+.mail-search::placeholder { color: rgba(240, 246, 252, 0.5); }
+.inbox-tools { gap: 8px; }
+
+.filter-row {
+  display: flex;
+  gap: 6px;
+}
+
+.filter-btn, .sort-select {
+  border-radius: 6px;
+  font-size: 0.78rem;
+}
+
+.filter-btn {
+  padding: 5px 10px;
+  border: 1px solid rgba(240, 246, 252, 0.14);
+}
+
+.filter-btn.active {
+  background: rgba(240, 246, 252, 0.14);
+  color: #f0f6fc;
+  border-color: rgba(240, 246, 252, 0.28);
+}
+
+.sort-select {
+  padding: 5px 8px;
+  background: #161b22;
+  color: #f0f6fc;
 }
 
 .logo {
@@ -42,56 +104,37 @@
 .inbox-head h1 {
   font-size: 0.95rem;
   font-weight: 500;
-  color: rgba(240, 246, 252, 0.65);
 }
 
 .mail-list {
   list-style: none;
-  flex: 1;
-  overflow-y: auto;
   padding: 10px;
-  display: flex;
-  flex-direction: column;
   gap: 4px;
 }
 
 .mail-btn {
   width: 100%;
   text-align: left;
-  background: transparent;
   border: 1px solid transparent;
   border-radius: 8px;
   padding: 12px 14px;
   color: inherit;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
   gap: 4px;
 }
 
-.mail-btn:hover {
-  background: rgba(240, 246, 252, 0.06);
-}
+.mail-btn:hover { background: rgba(240, 246, 252, 0.06); }
 
 .mail-btn.active {
   background: rgba(240, 246, 252, 0.1);
   border-color: rgba(240, 246, 252, 0.2);
 }
 
-.mail-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 8px;
-}
+.mail-top { gap: 8px; }
 
 .mail-sender {
   font-size: 0.92rem;
   font-weight: 600;
   min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .mail-time {
@@ -104,52 +147,36 @@
 .mail-subject {
   font-size: 0.86rem;
   color: rgba(240, 246, 252, 0.74);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .topbar {
   height: 72px;
   padding: 0 28px;
-  border-bottom: 1px solid rgba(240, 246, 252, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   background: rgba(13, 17, 23, 0.45);
 }
 
-.sync-btn,
-.settings-btn {
+.sync-btn, .settings-btn, .logout-btn {
   border-radius: 8px;
-  cursor: pointer;
   border: 1px solid rgba(240, 246, 252, 0.2);
   color: #f0f6fc;
 }
 
+.sync-btn, .logout-btn { background: rgba(240, 246, 252, 0.1); }
+
 .sync-btn {
   padding: 9px 20px;
-  background: rgba(240, 246, 252, 0.1);
   font-size: 0.92rem;
   font-weight: 500;
 }
 
-.sync-btn:hover {
-  background: rgba(240, 246, 252, 0.16);
-}
+.sync-btn:hover { background: rgba(240, 246, 252, 0.16); }
 
 .settings-btn {
   width: 38px;
   height: 38px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
 }
 
-.settings-btn:hover {
-  background: rgba(240, 246, 252, 0.08);
-}
+.settings-btn:hover { background: rgba(240, 246, 252, 0.08); }
 
 .settings-btn svg {
   width: 19px;
@@ -164,37 +191,21 @@
   grid-template-columns: 1fr 1.2fr;
 }
 
-.summary-col {
-  border-right: 1px solid rgba(240, 246, 252, 0.14);
-  background: rgba(22, 27, 34, 0.42);
-}
-
-.full-col {
-  background: rgba(13, 17, 23, 0.35);
-}
-
-.pane-head {
-  padding: 18px 28px;
-  border-bottom: 1px solid rgba(240, 246, 252, 0.12);
-}
+.summary-col { background: rgba(22, 27, 34, 0.42); }
+.full-col { background: rgba(13, 17, 23, 0.35); }
+.pane-head { padding: 18px 28px; }
 
 .pane-head h2 {
   font-size: 1rem;
   font-weight: 600;
-  color: rgba(240, 246, 252, 0.88);
 }
 
-.pane-body {
-  flex: 1;
-  overflow-y: auto;
-  padding: 28px;
-}
+.pane-body { padding: 28px; }
 
 .mail-title {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 6px;
-  overflow-wrap: anywhere;
 }
 
 .mail-meta {
@@ -203,18 +214,13 @@
   margin-bottom: 20px;
 }
 
-.full-meta {
-  margin-bottom: 22px;
-}
+.full-meta { margin-bottom: 22px; }
 
 .summary-list {
   padding-left: 20px;
-  display: flex;
-  flex-direction: column;
   gap: 12px;
   font-size: 0.98rem;
   line-height: 1.55;
-  color: rgba(240, 246, 252, 0.88);
   margin-bottom: 28px;
 }
 
@@ -228,12 +234,9 @@
   border-radius: 8px;
   font-size: 0.92rem;
   font-weight: 600;
-  cursor: pointer;
 }
 
-.read-btn:hover {
-  opacity: 0.9;
-}
+.read-btn:hover { opacity: 0.9; }
 
 .empty-note {
   font-size: 0.95rem;
@@ -244,9 +247,7 @@
   font-family: inherit;
   font-size: 0.96rem;
   line-height: 1.65;
-  color: rgba(240, 246, 252, 0.88);
   white-space: pre-wrap;
-  overflow-wrap: anywhere;
 }
 
 .profile-backdrop {
@@ -254,27 +255,19 @@
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(4px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 24px;
   z-index: 10;
 }
 
-.profile-backdrop.hidden {
-  display: none;
-}
+.profile-backdrop.hidden { display: none; }
 
 .profile-card {
   position: relative;
   width: min(360px, 100%);
   background: rgba(22, 27, 34, 0.88);
-  border: 1px solid rgba(240, 246, 252, 0.16);
   border-radius: 16px;
   backdrop-filter: blur(12px);
   padding: 32px 28px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 24px;
@@ -284,17 +277,12 @@
   position: absolute;
   top: 16px;
   right: 18px;
-  background: transparent;
   border: none;
-  color: rgba(240, 246, 252, 0.65);
   font-size: 1.5rem;
   line-height: 1;
-  cursor: pointer;
 }
 
-.close-btn:hover {
-  color: #f0f6fc;
-}
+.close-btn:hover { color: #f0f6fc; }
 
 .profile-title {
   font-size: 1.3rem;
@@ -302,52 +290,36 @@
 }
 
 .account-box {
-  display: flex;
-  flex-direction: column;
   gap: 6px;
+  font-size: 0.95rem;
 }
 
-.account-label {
-  font-size: 0.95rem;
-  font-weight: 600;
-}
-
-.account-email {
-  font-size: 0.95rem;
-  color: rgba(240, 246, 252, 0.68);
-}
+.account-label { font-weight: 600; }
+.account-email { color: rgba(240, 246, 252, 0.68); }
 
 .logout-btn {
   width: 100%;
   padding: 12px 18px;
   text-decoration: none;
-  background: rgba(240, 246, 252, 0.1);
-  color: #f0f6fc;
-  border: 1px solid rgba(240, 246, 252, 0.22);
-  border-radius: 8px;
+  border-color: rgba(240, 246, 252, 0.22);
   font-size: 0.95rem;
   font-weight: 600;
 }
 
-.logout-btn:hover {
-  background: rgba(240, 246, 252, 0.18);
-}
+.logout-btn:hover { background: rgba(240, 246, 252, 0.18); }
 
 @media (max-width: 960px) {
-  html,
-  body {
+  html, body {
     height: auto;
     overflow: auto;
   }
 
-  .layout,
-  .panes {
+  .layout, .panes {
     height: auto;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
-  .inbox-col,
-  .summary-col {
+  .inbox-col, .summary-col {
     border-right: none;
     border-bottom: 1px solid rgba(240, 246, 252, 0.14);
   }

@@ -16,8 +16,22 @@
   <div class="layout">
     <aside class="col inbox-col">
       <div class="inbox-head">
-        <span class="logo">Kbail</span>
-        <h1>Inbox</h1>
+        <div class="inbox-title-row">
+          <span class="logo">Kbail</span>
+          <h1>Inbox</h1>
+        </div>
+        <input type="search" id="mail-search" class="mail-search" placeholder="Search" aria-label="Search" />
+        <div class="inbox-tools">
+          <div class="filter-row">
+            <button type="button" class="filter-btn active" data-filter="all">All</button>
+            <button type="button" class="filter-btn" data-filter="today">Today</button>
+          </div>
+          <select id="mail-sort" class="sort-select" aria-label="Sort">
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+            <option value="sender">Sender</option>
+          </select>
+        </div>
       </div>
       <ul class="mail-list" id="inbox-list"></ul>
     </aside>

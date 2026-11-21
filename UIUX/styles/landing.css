@@ -1,18 +1,27 @@
-html,
-body {
-  display: flex;
-  flex-direction: column;
-}
-
 .glass-layer {
   background: rgba(13, 17, 23, 0.68);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
 
-.topbar {
-  padding: 36px 48px;
+body, .envelope-card, .envelope-body, .try-callout {
+  display: flex;
+  flex-direction: column;
 }
+
+.stage, .envelope-flap, .btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-google, .btn-sample {
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 1.08rem;
+}
+
+.topbar { padding: 36px 48px; }
 
 .brand {
   font-size: 2.1rem;
@@ -23,9 +32,6 @@ body {
 .stage {
   flex: 1;
   min-height: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: clamp(24px, 5vw, 72px);
   padding: 20px;
 }
@@ -38,8 +44,6 @@ body {
   border-radius: 18px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
 }
@@ -47,9 +51,6 @@ body {
 .envelope-flap {
   position: relative;
   height: 190px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .flap-lines {
@@ -75,38 +76,20 @@ body {
 
 .envelope-body {
   padding: 24px 48px 52px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 16px;
-}
-
-.auth-prompt {
-  font-size: 0.95rem;
-  color: rgba(240, 246, 252, 0.72);
-  text-align: center;
-  letter-spacing: -0.01em;
 }
 
 .btn-google {
   width: 100%;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   gap: 12px;
   padding: 16px 24px;
   background: #f0f6fc;
   color: #0d1117;
-  border-radius: 10px;
-  font-size: 1.08rem;
   font-weight: 600;
   transition: opacity 0.15s ease;
 }
 
-.btn-google:hover {
-  opacity: 0.92;
-}
+.btn-google:hover { opacity: 0.92; }
 
 .google-mark {
   width: 22px;
@@ -114,11 +97,7 @@ body {
   flex-shrink: 0;
 }
 
-.try-callout {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
+.try-callout { gap: 12px; }
 
 .try-question {
   font-size: 1.25rem;
@@ -138,14 +117,10 @@ body {
 }
 
 .btn-sample {
-  display: inline-block;
-  text-decoration: none;
   padding: 13px 24px;
   background: rgba(22, 27, 34, 0.72);
   color: #f0f6fc;
   border: 1px solid rgba(240, 246, 252, 0.24);
-  border-radius: 10px;
-  font-size: 1.08rem;
   font-weight: 500;
   transition: border-color 0.15s ease, background 0.15s ease;
 }
@@ -161,7 +136,5 @@ body {
     gap: 32px;
   }
 
-  .try-callout {
-    align-items: center;
-  }
+  .try-callout { align-items: center; }
 }
